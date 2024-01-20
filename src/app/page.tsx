@@ -14,6 +14,7 @@ export default function Home() {
           src="./images/bg-lg.jpeg"
           alt="Background Image LG"
           className="hidden sm:block  opacity-40"
+          style={{ width : "100%", height : "100%", objectFit: "cover" }}
           width={1920}
           height={720}
         />
@@ -23,6 +24,7 @@ export default function Home() {
           src="./images/bg-sm.jpeg"
           alt="Background Image SM"
           className="sm:hidden opacity-20"
+          style={{ width : "100%", height : "100%", objectFit: "cover" }}
           width={1920}
           height={1080}
         />
