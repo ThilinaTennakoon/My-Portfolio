@@ -30,7 +30,7 @@ function Navbar() {
     <nav className="bg-transparent">
       <div className="max-w-screen-xl pt-4 flex flex-wrap items-center justify-between mx-auto">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="images/Logo.png" className="h-8" alt="Flowbite Logo" />
+          {/* <img src="images/Logo.png" className="h-8" alt="Logo" /> */}
           <span className="self-center text-2xl font-normal font-mono  text-white dark:text-white">Thilina .</span>
         </a>
         <button
