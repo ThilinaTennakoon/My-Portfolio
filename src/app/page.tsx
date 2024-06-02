@@ -4,14 +4,14 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import EyesRotation from '../components/eyesRotation';
-import Navbar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import Carousel from '../components/Carousel';
 
 const Home: React.FC = () => {
 
   return (
     <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
-      <Navbar />
+      <NavBar/>
       {/* page content */}
       <div className="relative  flex flex-row h-full w-full pt-16">
         <div className="flex w-1/2 h-full gap-10 flex-col px-10">

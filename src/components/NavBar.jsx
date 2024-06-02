@@ -1,7 +1,7 @@
 // components/Navbar.tsx
 import React, { useState, useEffect } from "react";
 
-function Navbar() {
+function NavBar() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
       // If the code is running on the client side, use the local storage or default to light mode
@@ -203,4 +203,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
