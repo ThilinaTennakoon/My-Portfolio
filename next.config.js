@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    images: {
-        unoptimized: true,
-      },
+    reactStrictMode: true,
+    experimental: {
+      appDir: true, // Ensure this is a valid experimental feature you need
+    },
    
 
 }
