@@ -1,62 +1,45 @@
+// pages/index.tsx
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
-import EyesRotation from './EyesRotation';
-// import Carousel from './Carousel';
+import EyesRotation from '../components/eyesRotation';
+import NavBar from '../components/NavBar';
+import Carousel from '../components/Carousel';
 
-export default function Home() {
+const Home: React.FC = () => {
+
   return (
-    <main className="min-h-screen p-10 pt-20 bg-gradient-to-tr from-blue-400 to-purple-600">
-      {/* <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
-       
-        <Image
-          src="./images/bg-lg.jpeg"
-          alt="Background Image LG"
-          className="hidden sm:block  opacity-40"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          width={1920}
-          height={720}
-        />
-
-        <Image
-          src="./images/bg-sm.jpeg"
-          alt="Background Image SM"
-          className="sm:hidden opacity-20"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          width={1920}
-          height={1080}
-        />
-      </div> */}
-
-      {/* page content*/}
-      <div className="relative flex flex-row h-full w-full">
+    <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
+      <NavBar/>
+      {/* page content */}
+      <div className="relative  flex flex-row h-full w-full pt-16">
         <div className="flex w-1/2 h-full gap-10 flex-col px-10">
-          <div className="flex text-left h-[150px]">
+          <div className="flex-col text-left gap-5 w-full h-auto">
+            <h1 className="text-2xl font-semibold text-white text-opacity-35 font-pacifico ">THILINA THENNAKOON</h1>
             <TypeAnimation
+             //preRenderFirstString={true}
               style={{ whiteSpace: 'pre-line', display: 'inline-block' }}
               sequence={[
-                'Hi, I am Thilina \n I am a Developer.',
-                1000,
-                'Hi, I am Thilina \n I am a Designer.',
-                1000,
-                'Hi, I am Thilina \n I am a Programmer.',
-                1000,
-                'Hi, I am Thilina \n I am a Learner.',
-                1000,
-                'Hi, I am Thilina \n I am a Problem Solver.',
-                1000,
-                'Hi, I am Thilina \n I am a Creator.',
-                1000,
-                'Hi, I am Thilina \n I am a Developer.',
+                'I am a Web Developer.',
                 10000000,
                 '',
               ]}
               speed={25}
               cursor={false}
-              className="lg:text-6xl font-bold text-white md:text-5xl text-xl"
+              className="text-5xl font-bold text-white"
             />
+             <div className="flex pt-4 flex-col text-white text-opacity-60">
+            <p className="text-lg">
+              I am a web developer with a passion for creating beautiful and
+              functional websites. I specialize in front-end development and
+              have experience 
+            </p>
           </div>
+          </div>
+          {/* About me */}
+         
+          
           {/* <div className="flex flex-row gap-4 justify-center items-center ">
             <div className="flex justify-center mt-8 lg:mt-0 md:mt-20">
               <a
@@ -81,7 +64,7 @@ export default function Home() {
 
           </div> */}
           <div className="flex flex-grow items-center justify-center w-full bg-green-300">
-            {/* <Carousel /> */}
+            <Carousel />
           </div>
         </div>
 
@@ -92,4 +75,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;
