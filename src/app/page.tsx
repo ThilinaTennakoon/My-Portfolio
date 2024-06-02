@@ -3,16 +3,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
-import EyesRotation from './components/eyesRotation';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
+import EyesRotation from '../components/eyesRotation';
+import Navbar from '../components/Navbar';
+import Carousel from '../components/Carousel';
 
 const Home: React.FC = () => {
-
-  const [textColor, setTextColor] = useState('');
-
-
-
 
   return (
     <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
