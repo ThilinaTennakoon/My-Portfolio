@@ -21,7 +21,7 @@ function CarouselSlider() {
     )}
 
     autoplay={true}
-    loop={true}
+    //loop={true}
     transition={
       {
         duration: 0.5,
