@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
       <NavBar/>
       {/* page content */}
-      <div className="relative  flex flex-row h-full w-full pt-16">
+      <div className="relative container mx-auto  flex flex-row h-full w-full pt-16">
         <div className="flex w-1/2 h-full gap-10 flex-col px-10">
           <div className="flex-col text-left gap-5 w-full h-auto">
             <h1 className="text-2xl font-semibold text-white text-opacity-35 font-pacifico ">THILINA THENNAKOON</h1>

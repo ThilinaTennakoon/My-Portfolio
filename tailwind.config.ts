@@ -7,10 +7,6 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class', // Enable dark mode with the class strategy
-
-  
-
-
   theme: {
     extend: {
       backgroundImage: {
