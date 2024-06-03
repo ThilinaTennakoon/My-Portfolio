@@ -31,7 +31,7 @@ const Home: React.FC = () => {
               className="text-5xl font-bold text-white"
             />
              <div className="flex pt-4 flex-col text-white text-opacity-60">
-            <p className="text-lg">
+            <p className="text-md font-mono">
               I am a web developer with a passion for creating beautiful and
               functional websites. I specialize in front-end development and
               have experience 

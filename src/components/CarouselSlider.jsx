@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import Image from 'next/image';
 
 function CarouselSlider() {
   return (
@@ -30,10 +31,12 @@ function CarouselSlider() {
     }
     >
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
           alt="image 1"
           className="h-full w-full object-cover"
+          width={1200} // Replace with appropriate width
+          height={800} // Replace with appropriate height
         />
         <div className="absolute inset-0 grid h-full w-1/2 place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
@@ -55,11 +58,13 @@ function CarouselSlider() {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
           alt="image 1"
           className="h-full w-full object-cover"
-        />
+          width={1200} // Replace with appropriate width
+          height={800} // Replace with appropriate height
+          />
         <div className="absolute inset-0 grid h-full w-1/2 place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
             <Typography
@@ -80,10 +85,12 @@ function CarouselSlider() {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
           alt="image 1"
           className="h-full w-full object-cover"
+          width={1200} // Replace with appropriate width
+          height={800} // Replace with appropriate height
         />
         <div className="absolute inset-0 grid h-full w-1/2 place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
