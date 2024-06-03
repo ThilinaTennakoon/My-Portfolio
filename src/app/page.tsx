@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import EyesRotation from '../components/eyesRotation';
 import NavBar from '../components/NavBar';
+import CarouselSlider from '../components/CarouselSlider';
 
 const Home: React.FC = () => {
 
@@ -63,7 +64,7 @@ const Home: React.FC = () => {
 
           </div> */}
           <div className="flex flex-row w-full h-[350px] gap-4 justify-center items-center ">
-            {/* <CarouselSlider/> */}
+            <CarouselSlider/>
           </div>
         </div>
 
