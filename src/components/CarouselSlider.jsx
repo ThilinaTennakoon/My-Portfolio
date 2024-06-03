@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 
-function CarouselSlider() {
+function CarouselSlider({ slides }) {
   return (
     <Carousel 
     className="rounded-xl"
@@ -29,10 +29,11 @@ function CarouselSlider() {
     //   }
     // }
     >
-      <div className="relative h-full w-full">
-        <img
-          src={"slider/Fb1.jpg"}
-          alt="image 1"
+      {slides.map((slide, index) => (
+        <div key={index} className="relative h-full w-full">
+          <img
+            src={slide.imageUrl}
+            alt={`image ${index + 1}`}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-1/2 place-items-center bg-black/75">
@@ -42,18 +43,19 @@ function CarouselSlider() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-sm"
             >
-              The Beauty of Nature
+              {slide.title}
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim upon
+              {slide.description}
             </Typography>
           </div>
         </div>
       </div>
+    ))}
      
     </Carousel>
   );

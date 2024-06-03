@@ -9,6 +9,16 @@ import CarouselSlider from '../components/CarouselSlider';
 
 const Home: React.FC = () => {
 
+  const slides = [
+    {
+      imageUrl: 'slider/Fb1.jpg',
+      title: 'Slide 1',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni quas, doloribus aliquid",
+    },
+   
+  ];
+  
+
   return (
     <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
       <NavBar/>
@@ -64,7 +74,7 @@ const Home: React.FC = () => {
 
           </div> */}
           <div className="flex flex-row w-full h-[350px] gap-4 justify-center items-center ">
-            <CarouselSlider/>
+          <CarouselSlider slides={slides} />
           </div>
         </div>
 
