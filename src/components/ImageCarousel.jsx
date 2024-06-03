@@ -21,16 +21,16 @@ const ImageCarousel = ({ slides }) => {
   };
 
   return (
-    <div className="w-full ">
+    <div className="">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="relative h-full w-full">
+          <div key={index} className="relative ">
             <img
               src={slide.imageUrl}
               alt={`image ${index + 1}`}
-              className="h-full w-full object-cover shadow-xl rounded-3xl  "
+              className="object-cover rounded-3xl  "
             />
-            <div className="absolute inset-0 grid h-full w-1/3  rounded-l-3xl px-3 py-6 bg-black/75">
+            <div className="absolute inset-0 grid h-auto w-1/3  rounded-l-3xl px-3 py-6 bg-black/75">
               <div className="w-full flex-col gap-2 flex text-left">
                 <h4 className="text-white text-lg">
                   {slide.title}

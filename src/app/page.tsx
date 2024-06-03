@@ -35,7 +35,7 @@ const Home: React.FC = () => {
       <NavBar/>
       {/* page content */}
       <div className="relative container mx-auto  flex flex-row h-full w-full pt-16">
-        <div className="flex w-1/2 h-full gap-10 flex-col px-10">
+        <div className="flex w-1/2 h-auto gap-10 flex-col px-10">
           <div className="flex-col text-left gap-5 w-full h-auto">
             <h1 className="text-2xl font-semibold text-white text-opacity-35 font-pacifico ">THILINA THENNAKOON</h1>
             <TypeAnimation
@@ -56,6 +56,11 @@ const Home: React.FC = () => {
               functional websites. I specialize in front-end development and
               have experience 
             </p>
+          </div>
+          <div className="w-full h-[200px] justify-center mt-5 items-center">
+          {/* <CarouselSlider slides={slides} /> */}
+          <ImageCarousel slides={slides} />
+       
           </div>
           </div>
           {/* About me */}
@@ -84,11 +89,7 @@ const Home: React.FC = () => {
             </div>
 
           </div> */}
-          <div className="w-full h-[500px] gap-4 justify-center items-center ">
-          {/* <CarouselSlider slides={slides} /> */}
-          <ImageCarousel slides={slides} />
-       
-          </div>
+          
         </div>
 
         {/* Adding the EyesRotation component */}
