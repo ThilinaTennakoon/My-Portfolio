@@ -56,7 +56,7 @@ function EyesRotation() {
             className="w-full  h-full rounded-full"
             style={{ position: 'absolute', zIndex: 2 }}
           />
-          <div className="absolute flex gap-[50px] top-[31.5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2" style={{ zIndex: 1 }}>
+          <div className="absolute flex gap-12 top-[31.5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2" style={{ zIndex: 1 }}>
             <div className="relative w-[38.5px] h-[22px] bg-gradient-to-br from-gray-800 via-pink-100 to-transparent rounded-full flex items-center justify-center">
               <div
                 style={{

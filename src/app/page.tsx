@@ -16,6 +16,16 @@ const Home: React.FC = () => {
       title: 'Slide 1',
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni quas, doloribus aliquid",
     },
+    {
+      imageUrl: 'slider/Fb2.jpg',
+      title: 'Slide 2',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni quas, doloribus aliquid",
+    },
+    {
+      imageUrl: 'slider/Fb3.jpg',
+      title: 'Slide 3',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni quas, doloribus aliquid",
+    },
    
   ];
   
@@ -74,9 +84,9 @@ const Home: React.FC = () => {
             </div>
 
           </div> */}
-          <div className="flex flex-row w-full h-[350px] gap-4 justify-center items-center ">
+          <div className="w-full h-[500px] gap-4 justify-center items-center ">
           {/* <CarouselSlider slides={slides} /> */}
-          <ImageCarousel />
+          <ImageCarousel slides={slides} />
        
           </div>
         </div>
