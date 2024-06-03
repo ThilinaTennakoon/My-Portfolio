@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import EyesRotation from '../components/eyesRotation';
 import NavBar from '../components/NavBar';
-import Carousel from '../components/Carousel';
 
 const Home: React.FC = () => {
 
@@ -30,7 +29,7 @@ const Home: React.FC = () => {
               className="text-5xl font-bold text-white"
             />
              <div className="flex pt-4 flex-col text-white text-opacity-60">
-            <p className="text-lg">
+            <p className="text-md font-mono">
               I am a web developer with a passion for creating beautiful and
               functional websites. I specialize in front-end development and
               have experience 
@@ -63,8 +62,8 @@ const Home: React.FC = () => {
             </div>
 
           </div> */}
-          <div className="flex flex-grow items-center justify-center w-full bg-green-300">
-            <Carousel />
+          <div className="flex flex-row w-full h-[350px] gap-4 justify-center items-center ">
+            {/* <CarouselSlider/> */}
           </div>
         </div>
 

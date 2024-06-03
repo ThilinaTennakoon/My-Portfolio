@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 
 
 function EyesRotation() {
-  const [mouseX, setMouseX] = useState(50);
-  const [mouseY, setMouseY] = useState(50);
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
   const [containerRect, setContainerRect] = useState(null);
 
   useEffect(() => {
