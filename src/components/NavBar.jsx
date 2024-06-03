@@ -5,10 +5,10 @@ function NavBar() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
       // If the code is running on the client side, use the local storage or default to light mode
-      return localStorage.getItem("theme") || "light";
+      return localStorage.getItem("theme") || "dark";
     } else {
       // If the code is running on the server side, always use light mode
-      return "light";
+      return "dark";
     }
   });
 
@@ -30,7 +30,7 @@ function NavBar() {
     <nav className="bg-transparent">
       <div className="max-w-screen-xl pt-4 flex flex-wrap items-center justify-between mx-auto">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          {/* <img src="images/Logo.png" className="h-8" alt="Logo" /> */}
+          <img src="images/Logo.png" className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-normal font-mono  text-white dark:text-white">Thilina .</span>
         </a>
         <button
