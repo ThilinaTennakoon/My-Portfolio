@@ -31,12 +31,13 @@ const Home: React.FC = () => {
   
 
   return (
-    <main className="min-h-screen px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
+    <main className="min-h-screen lg:px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
       <NavBar/>
       {/* page content */}
-      <div className="relative container mx-auto  flex flex-row h-full w-full pt-16">
-        <div className="flex w-1/2 h-auto gap-10 flex-col px-10">
+      <div className="relative container mx-auto  flex lg:flex-row flex-col h-full w-full pt-16">
+        <div className="flex lg:w-1/2 h-auto gap-10 flex-col px-10">
           <div className="flex-col text-left gap-5 w-full h-auto">
+
             <h1 className="text-2xl font-semibold text-white text-opacity-35 font-pacifico ">THILINA THENNAKOON</h1>
             <TypeAnimation
              //preRenderFirstString={true}
@@ -48,7 +49,7 @@ const Home: React.FC = () => {
               ]}
               speed={25}
               cursor={false}
-              className="text-5xl font-bold text-white"
+              className="lg:text-5xl md:text-4xl text-3xl font-bold text-white"
             />
              <div className="flex pt-4 flex-col text-white text-opacity-60">
             <p className="text-md font-mono">
@@ -59,8 +60,8 @@ const Home: React.FC = () => {
           </div>
           <div className="w-full h-[200px] justify-center mt-5 items-center">
           {/* <CarouselSlider slides={slides} /> */}
-          <ImageCarousel slides={slides} />
-       
+          {/* <ImageCarousel slides={slides} />
+        */}
           </div>
           </div>
           {/* About me */}
@@ -93,7 +94,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Adding the EyesRotation component */}
-        <div className="flex items-center justify-center w-1/2 h-full bg-transparent">
+        <div className="hidden lg:block items-center justify-center w-1/2 h-full bg-transparent">
           <EyesRotation />
         </div>
       </div>

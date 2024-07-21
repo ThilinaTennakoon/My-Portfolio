@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 
-
 function EyesRotation() {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
@@ -14,7 +13,6 @@ function EyesRotation() {
         let mouseX = ((e.clientX - containerRect.left) * 100) / containerRect.width;
         let mouseY = ((e.clientY - containerRect.top) * 100) / containerRect.height;
 
-        // Limit the movement to a range (for example, 10% to 90% of the container)
         mouseX = Math.max(10, Math.min(mouseX, 90));
         mouseY = Math.max(10, Math.min(mouseY, 90));
 
