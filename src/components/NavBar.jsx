@@ -1,5 +1,6 @@
 // components/Navbar.tsx
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 function NavBar() {
   const [theme, setTheme] = useState(() => {
@@ -30,7 +31,12 @@ function NavBar() {
     <nav className="bg-transparent px-4">
       <div className="max-w-screen-xl pt-4 flex flex-wrap items-center justify-between mx-auto">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="images/Logo.png" className="h-8" alt="Logo" />
+          <Image 
+          src="images/Logo.png" 
+          className="h-8" alt="Logo" 
+          width={30}
+          height={40}
+          />
           <span className="self-center text-2xl font-normal font-mono  text-white dark:text-white">Thilina .</span>
         </a>
         <button

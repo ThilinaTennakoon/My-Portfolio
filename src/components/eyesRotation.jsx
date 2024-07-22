@@ -1,8 +1,10 @@
 // EyesRotation.js
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-function EyesRotation() {
+function EyesRotation( isSurprisingBoolean ) {
+  console.log(isSurprisingBoolean);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const [containerRect, setContainerRect] = useState(null);
@@ -10,8 +12,10 @@ function EyesRotation() {
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (containerRect) {
-        let mouseX = ((e.clientX - containerRect.left) * 100) / containerRect.width;
-        let mouseY = ((e.clientY - containerRect.top) * 100) / containerRect.height;
+        let mouseX =
+          ((e.clientX - containerRect.left) * 100) / containerRect.width;
+        let mouseY =
+          ((e.clientY - containerRect.top) * 100) / containerRect.height;
 
         mouseX = Math.max(10, Math.min(mouseX, 90));
         mouseY = Math.max(10, Math.min(mouseY, 90));
@@ -39,55 +43,79 @@ function EyesRotation() {
   const imgHeight = 600;
 
   return (
-      <div className="flex items-center justify-center w-full h-full">
-        <div
-          id="image-container"
-          className="relative"
-          style={{
-            width: `${imgWidth}px`,
-            height: `${imgHeight}px`,
-          }}
-        >
-          <img
-            src="images/Profile.png"
+    <div className="flex items-center justify-center w-full h-full">
+      <div
+        id="image-container"
+        className="relative"
+        style={{
+          width: `${imgWidth}px`,
+          height: `${imgHeight}px`,
+        }}
+      >
+        {!isSurprisingBoolean ? (
+          <Image
+            src="images/Profile-new.png"
             alt="Your Image"
             className="w-full  h-full rounded-full"
-            style={{ position: 'absolute', zIndex: 2 }}
+            style={{ position: "absolute", zIndex: 2 }}
+            width={imgWidth}
+            height={imgHeight}
           />
-          <div className="absolute flex gap-12 top-[31.5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2" style={{ zIndex: 1 }}>
-            <div className="relative w-[38.5px] h-[22px] bg-gradient-to-br from-gray-800 via-pink-100 to-transparent rounded-full flex items-center justify-center">
-              <div
-                style={{
-                  left: mouseX,
-                  top: mouseY,
-                  transform: `translate(-${mouseX}, -${mouseY})`,
-                }}
-                className="absolute w-[17px] h-[17px] bg-green-400 rounded-full"
-              >
-                <img 
-                src="images/le.png"
-                alt="Left Eye" 
-                className="w-full h-full rounded-full" />
+        ) : (
+          <>
+            <Image
+              src="images/Profile.png"
+              alt="Your Image"
+              className="w-full  h-full rounded-full"
+              style={{ position: "absolute", zIndex: 2 }}
+              width={imgWidth}
+              height={imgHeight}
+            />
+            <div
+              className="absolute flex gap-12 top-[31.5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2"
+              style={{ zIndex: 1 }}
+            >
+              <div className="relative w-[38.5px] h-[22px] bg-gradient-to-br from-gray-800 via-pink-100 to-transparent rounded-full flex items-center justify-center">
+                <div
+                  style={{
+                    left: mouseX,
+                    top: mouseY,
+                    transform: `translate(-${mouseX}, -${mouseY})`,
+                  }}
+                  className="absolute w-[17px] h-[17px] bg-green-400 rounded-full"
+                >
+                  <Image
+                    src="images/le.png"
+                    alt="Left Eye"
+                    className="w-full h-full rounded-full"
+                    width={17}
+                    height={17}
+                  />
+                </div>
+              </div>
+              <div className="relative w-[38.5px] h-[22px] bg-gradient-to-bl from-gray-800 via-pink-100 to-transparent rounded-full flex items-center justify-center">
+                <div
+                  style={{
+                    left: mouseX,
+                    top: mouseY,
+                    transform: `translate(-${mouseX}, -${mouseY})`,
+                  }}
+                  className="absolute w-[17px] h-[17px] bg-green-400 rounded-full"
+                >
+                  <Image
+                    src="images/le.png"
+                    alt="Right Eye"
+                    className="w-full h-full rounded-full"
+                    width={17}
+                    height={17}
+                  />
+                </div>
               </div>
             </div>
-            <div className="relative w-[38.5px] h-[22px] bg-gradient-to-bl from-gray-800 via-pink-100 to-transparent rounded-full flex items-center justify-center">
-              <div
-                style={{
-                  left: mouseX,
-                  top: mouseY,
-                  transform: `translate(-${mouseX}, -${mouseY})`,
-                }}
-                className="absolute w-[17px] h-[17px] bg-green-400 rounded-full"
-              >
-                <img 
-                 src="images/le.png"
-                 alt="Right Eye" 
-                 className="w-full h-full rounded-full" />
-              </div>
-            </div>
-          </div>
-        </div>
+          </>
+        )}
       </div>
+    </div>
   );
 }
 

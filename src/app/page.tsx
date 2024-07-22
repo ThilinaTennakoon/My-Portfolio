@@ -1,12 +1,17 @@
 // pages/index.tsx
 "use client";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import EyesRotation from '../components/eyesRotation';
 import NavBar from '../components/NavBar';
+
 // import CarouselSlider from '../components/CarouselSlider';
 import ImageCarousel from '../components/ImageCarousel';
+
+
+const CodeEditor = dynamic(() => import('../components/CodeEditor'), { ssr: false });
 
 const Home: React.FC = () => {
 
@@ -26,13 +31,13 @@ const Home: React.FC = () => {
       title: 'Slide 3',
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni quas, doloribus aliquid",
     },
-   
+
   ];
-  
+
 
   return (
     <main className="min-h-screen lg:px-20 mx-auto bg-gradient-to-tr from-blue-400 to-purple-600 dark:from-blue-800 dark:to-gray-900">
-      <NavBar/>
+      <NavBar />
       {/* page content */}
       <div className="relative container mx-auto  flex lg:flex-row flex-col h-full w-full pt-16">
         <div className="flex lg:w-1/2 h-auto gap-10 flex-col px-10">
@@ -40,7 +45,7 @@ const Home: React.FC = () => {
 
             <h1 className="text-2xl font-semibold text-white text-opacity-35 font-pacifico ">THILINA THENNAKOON</h1>
             <TypeAnimation
-             //preRenderFirstString={true}
+              //preRenderFirstString={true}
               style={{ whiteSpace: 'pre-line', display: 'inline-block' }}
               sequence={[
                 'I am a Web Developer.',
@@ -51,22 +56,26 @@ const Home: React.FC = () => {
               cursor={false}
               className="lg:text-5xl md:text-4xl text-3xl font-bold text-white"
             />
-             <div className="flex pt-4 flex-col text-white text-opacity-60">
-            <p className="text-md font-mono">
-              I am a web developer with a passion for creating beautiful and
-              functional websites. I specialize in front-end development and
-              have experience 
-            </p>
-          </div>
-          <div className="w-full h-[200px] justify-center mt-5 items-center">
-          {/* <CarouselSlider slides={slides} /> */}
-          {/* <ImageCarousel slides={slides} />
+            <div className="flex pt-4 flex-col text-white text-opacity-60">
+              <p className="text-md font-mono">
+                I am a web developer with a passion for creating beautiful and
+                functional websites. I specialize in front-end development and
+                have experience
+              </p>
+            </div>
+            <div className="w-full  justify-center mt-5 items-center">
+              {/* <CarouselSlider slides={slides} /> */}
+              {/* <ImageCarousel slides={slides} />
+          
         */}
-          </div>
+              <div className=" bg-gray-100 dark:bg-gray-900 dark:bg-opacity-75 rounded-lg text-gray-900 dark:text-gray-100">
+                <CodeEditor />
+              </div>
+            </div>
           </div>
           {/* About me */}
-         
-          
+
+
           {/* <div className="flex flex-row gap-4 justify-center items-center ">
             <div className="flex justify-center mt-8 lg:mt-0 md:mt-20">
               <a
@@ -90,12 +99,12 @@ const Home: React.FC = () => {
             </div>
 
           </div> */}
-          
+
         </div>
 
         {/* Adding the EyesRotation component */}
         <div className="hidden lg:block items-center justify-center w-1/2 h-full bg-transparent">
-          <EyesRotation />
+          <EyesRotation isSurprisingBoolean={false} />
         </div>
       </div>
     </main>

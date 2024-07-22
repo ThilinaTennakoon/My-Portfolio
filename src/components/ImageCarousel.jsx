@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 
 const ImageCarousel = ({ slides }) => {
@@ -25,10 +26,12 @@ const ImageCarousel = ({ slides }) => {
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="relative ">
-            <img
+            <Image
               src={slide.imageUrl}
               alt={`image ${index + 1}`}
               className="object-cover rounded-3xl  "
+              width={500}
+              height={300}
             />
             <div className="absolute inset-0 grid h-auto w-1/3  rounded-l-3xl px-3 py-6 bg-black/75">
               <div className="w-full flex-col gap-2 flex text-left">

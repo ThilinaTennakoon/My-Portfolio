@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* styles.css or a similar CSS file */
+.editor-container {
+    height: 300px; /* Adjust as needed */
+  }

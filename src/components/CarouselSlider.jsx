@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import Image from 'next/image';
 
 function CarouselSlider({ slides }) {
   return (
@@ -31,10 +32,13 @@ function CarouselSlider({ slides }) {
     >
       {slides.map((slide, index) => (
         <div key={index} className="relative h-full w-full">
-          <img
+          <Image
             src={slide.imageUrl}
             alt={`image ${index + 1}`}
           className="h-full w-full object-cover"
+          layout="fill"
+          width={500}
+          height={300}
         />
         <div className="absolute inset-0 grid h-full w-1/2 place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
